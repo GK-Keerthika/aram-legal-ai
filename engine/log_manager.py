@@ -1,75 +1,105 @@
-# engine/log_manager.py
-# Purpose: Log every conversation for future training improvement
+ #engine/log_manager.py
+# Purpose: Save logs to BOTH MongoDB and local JSON
+# MongoDB = permanent cloud storage
+# Local JSON = backup fallback
 
 import json
 import os
 from datetime import datetime
 
-LOG_FILE = os.path.join("logs", "conversations.json")
+LOGS_FILE = os.path.join("logs", "conversations.json")
 
 
-def load_logs() -> dict:
-    """Loads existing conversation logs."""
-    try:
-        with open(LOG_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except Exception:
-        return {"conversations": []}
-
-
-def save_log(user_input: str, detected_intent: str, response: str):
+def save_log(
+    user_input: str,
+    intent: str,
+    response: str
+):
     """
-    Saves each conversation turn to logs/conversations.json.
-    This data is used later to improve training.
+    Save to MongoDB first.
+    Always save to local JSON as backup.
     """
+    # Try MongoDB first
     try:
-        logs = load_logs()
+        from engine.mongo_logger import save_to_mongo
+        save_to_mongo(user_input, intent, response)
+    except Exception as e:
+        print(f"⚠️  Mongo log failed: {e}")
 
-        entry = {
-            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+    # Always save locally as backup
+    _save_local(user_input, intent, response)
+
+
+def _save_local(
+    user_input: str,
+    intent: str,
+    response: str
+):
+    """Save conversation to local JSON file."""
+    try:
+        os.makedirs("logs", exist_ok=True)
+
+        # Load existing logs
+        logs = []
+        if os.path.exists(LOGS_FILE):
+            try:
+                with open(LOGS_FILE, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                if isinstance(data, list):
+                    logs = data
+                elif isinstance(data, dict):
+                    for key in ["conversations", "logs", "data"]:
+                        if key in data:
+                            logs = data[key]
+                            break
+            except Exception:
+                logs = []
+
+        # Add new entry
+        logs.append({
+            "timestamp": datetime.now().strftime(
+                "%Y-%m-%d %H:%M:%S"
+            ),
             "user_input": user_input,
-            "detected_intent": detected_intent,
-            "response_given": response[:100],  # Save first 100 chars
-            "feedback": None  # Will be filled later by user rating
-        }
+            "detected_intent": intent,
+            "response_given": response[:100],
+            "feedback": None
+        })
 
-        logs["conversations"].append(entry)
-
-        with open(LOG_FILE, "w", encoding="utf-8") as f:
-            json.dump(logs, f, indent=2, ensure_ascii=False)
+        # Save back
+        with open(LOGS_FILE, "w", encoding="utf-8") as f:
+            json.dump(logs, f, ensure_ascii=False, indent=2)
 
     except Exception as e:
-        print(f"[Log Warning] Could not save log: {e}")
+        print(f"⚠️  Local log failed: {e}")
 
 
 def get_log_summary() -> dict:
-    """
-    Returns a summary of conversation logs.
-    Useful for understanding what users are asking most.
-    """
-    logs = load_logs()
-    conversations = logs.get("conversations", [])
+    """Returns summary — prefers MongoDB, falls back to local."""
+    try:
+        from engine.mongo_logger import (
+            get_mongo_stats,
+            is_connected
+        )
+        if is_connected():
+            return {
+                "source": "MongoDB Atlas",
+                "stats": get_mongo_stats()
+            }
+    except Exception:
+        pass
 
-    if not conversations:
-        return {"total": 0, "intents": {}}
+    # Fallback to local
+    try:
+        if os.path.exists(LOGS_FILE):
+            with open(LOGS_FILE, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            logs = data if isinstance(data, list) else []
+            return {
+                "source": "Local JSON",
+                "total": len(logs)
+            }
+    except Exception:
+        pass
 
-    intent_counts = {}
-    for entry in conversations:
-        intent = entry.get("detected_intent", "UNKNOWN")
-        intent_counts[intent] = intent_counts.get(intent, 0) + 1
-
-    return {
-        "total": len(conversations),
-        "intents": intent_counts
-    }
-
-
-if __name__ == "__main__":
-    # Test logging
-    save_log(
-        user_input="I need a refund",
-        detected_intent="CP001",
-        response="It sounds like you haven't received your refund..."
-    )
-    print("✅ Log saved successfully!")
-    print("📊 Summary:", get_log_summary())
+    return {"source": "none", "total": 0}
