@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>அறம் · ARAM — Legal Awareness</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="navbar">
+    <a class="logo-mark" onclick="showPage('chat')" href="#">
+      <div class="logo-icon">
+        <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="goldGrad" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#e0c068"/>
+              <stop offset="1" stop-color="#9a7a30"/>
+            </linearGradient>
+          </defs>
+          <rect x="18" y="36" width="8" height="3" rx="1.5" fill="url(#goldGrad)"/>
+          <rect x="10" y="38" width="24" height="2" rx="1" fill="url(#goldGrad)" opacity="0.6"/>
+          <rect x="21" y="10" width="2" height="27" rx="1" fill="url(#goldGrad)"/>
+          <rect x="6" y="10" width="32" height="2" rx="1" fill="url(#goldGrad)"/>
+          <line x1="9" y1="12" x2="9" y2="21" stroke="url(#goldGrad)" stroke-width="1.2"/>
+          <line x1="35" y1="12" x2="35" y2="21" stroke="url(#goldGrad)" stroke-width="1.2"/>
+          <path d="M4 21 Q9 27 14 21" stroke="url(#goldGrad)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M30 21 Q35 27 40 21" stroke="url(#goldGrad)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <circle cx="22" cy="10" r="3" fill="url(#goldGrad)"/>
+          <circle cx="9" cy="21" r="1.5" fill="url(#goldGrad)" opacity="0.6"/>
+          <circle cx="35" cy="21" r="1.5" fill="url(#goldGrad)" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-tamil">அறம்</span>
+        <span class="logo-english">Legal Awareness</span>
+      </div>
+    </a>
+
+    <div class="nav-links">
+      <button class="nav-link active" id="navChat" onclick="showPage('chat')">
+        💬 <span>Chat</span>
+      </button>
+      <button class="nav-link" id="navAbout" onclick="showPage('about')">
+        ℹ️ <span>About</span>
+      </button>
+      <button class="nav-link" id="navLaws" onclick="showPage('laws')">
+        ⚖️ <span>Laws</span>
+      </button>
+    </div>
+
+    <div class="nav-status">
+      <div class="status-pulse"></div>
+      <span class="status-text">Online</span>
+    </div>
+  </nav>
+
+  <!-- ══ CHAT PAGE ══ -->
+  <div class="page active" id="chatPage">
+    <div class="chat-window" id="chatWindow">
+      <div class="welcome-hero">
+        <div class="hero-emblem">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="heroGold" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#f0d88a"/>
+                <stop offset="0.5" stop-color="#c9a84c"/>
+                <stop offset="1" stop-color="#9a7a30"/>
+              </linearGradient>
+            </defs>
+            <circle cx="40" cy="40" r="36" stroke="url(#heroGold)" stroke-width="1" stroke-dasharray="4 6" opacity="0.4"/>
+            <circle cx="40" cy="40" r="28" stroke="url(#heroGold)" stroke-width="0.5" opacity="0.2"/>
+            <circle cx="40" cy="4" r="2" fill="url(#heroGold)" opacity="0.5"/>
+            <circle cx="40" cy="76" r="2" fill="url(#heroGold)" opacity="0.5"/>
+            <circle cx="4" cy="40" r="2" fill="url(#heroGold)" opacity="0.5"/>
+            <circle cx="76" cy="40" r="2" fill="url(#heroGold)" opacity="0.5"/>
+            <circle cx="15" cy="15" r="1.5" fill="url(#heroGold)" opacity="0.4"/>
+            <circle cx="65" cy="15" r="1.5" fill="url(#heroGold)" opacity="0.4"/>
+            <circle cx="15" cy="65" r="1.5" fill="url(#heroGold)" opacity="0.4"/>
+            <circle cx="65" cy="65" r="1.5" fill="url(#heroGold)" opacity="0.4"/>
+            <rect x="37" y="20" width="6" height="3" rx="1.5" fill="url(#heroGold)"/>
+            <rect x="38.5" y="23" width="3" height="30" rx="1.5" fill="url(#heroGold)"/>
+            <rect x="53" y="58" width="14" height="3" rx="1.5" fill="url(#heroGold)" opacity="0.7"/>
+            <rect x="13" y="58" width="14" height="3" rx="1.5" fill="url(#heroGold)" opacity="0.7"/>
+            <rect x="18" y="22" width="44" height="3" rx="1.5" fill="url(#heroGold)"/>
+            <line x1="22" y1="25" x2="22" y2="38" stroke="url(#heroGold)" stroke-width="1.5"/>
+            <line x1="58" y1="25" x2="58" y2="38" stroke="url(#heroGold)" stroke-width="1.5"/>
+            <path d="M14 38 Q22 48 30 38" stroke="url(#heroGold)" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M50 38 Q58 48 66 38" stroke="url(#heroGold)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="hero-title">அறம்</div>
+        <div class="hero-tagline">
+          Justice · Awareness · Guidance — உங்கள் உரிமைகள் உங்கள் கையில்
+        </div>
+        <div class="hero-chips">
+          <div class="hero-chip" onclick="sendQuick('I need a refund')">🛒 Refund issue</div>
+          <div class="hero-chip" onclick="sendQuick('My account was hacked')">💻 Account hacked</div>
+          <div class="hero-chip" onclick="sendQuick('Someone is threatening me')">⚠️ Getting threats</div>
+          <div class="hero-chip" onclick="sendQuick('I was cheated by someone')">🚨 Got cheated</div>
+          <div class="hero-chip" onclick="sendQuick('Online fraud happened to me')">🔒 Online fraud</div>
+          <div class="hero-chip" onclick="sendQuick('How to file a complaint')">📋 File complaint</div>
+          <div class="hero-chip" onclick="sendQuick('என் பணம் திரும்ப வரவில்லை')">💰 பணம் திரும்ப</div>
+          <div class="hero-chip" onclick="sendQuick('account hack pannittaan')">🔐 Hack ஆனது</div>
+        </div>
+        <div class="hero-disclaimer">
+          ⚖️ Legal awareness only · Not legal advice
+        </div>
+      </div>
+    </div>
+
+    <div class="input-zone">
+      <div class="quick-row">
+        <button class="quick-btn" onclick="sendQuick('வணக்கம் அறம்')">வணக்கம்</button>
+        <button class="quick-btn" onclick="sendQuick('Who are you?')">Who are you?</button>
+        <button class="quick-btn" onclick="sendQuick('What can you help with?')">Help topics</button>
+        <button class="quick-btn" onclick="sendQuick('How to file a complaint')">File complaint</button>
+        <button class="quick-btn" onclick="sendQuick('enna pandra aram')">என்ன பண்ற?</button>
+      </div>
+      <div class="input-box">
+        <textarea
+          id="userInput"
+          placeholder="உங்கள் பிரச்சினையை சொல்லுங்கள்... (English / தமிழ் / Tanglish)"
+          rows="1"
+          maxlength="500"
+        ></textarea>
+        <button class="send-btn" onclick="sendMessage()" id="sendBtn" title="Send">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="input-footer">
+        <span class="input-hint">Enter to send · Shift+Enter for new line</span>
+        <span class="char-count" id="charCount">0 / 500</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ ABOUT PAGE ══ -->
+  <div class="page" id="aboutPage">
+
+    <!-- Language Toggle -->
+    <div class="lang-toggle-bar">
+      <span class="lang-toggle-label" id="aboutLangLabel">Page Language:</span>
+      <div class="lang-toggle">
+        <button class="lang-toggle-btn active" id="aboutEngBtn" onclick="setPageLang('about','eng')">ENG</button>
+        <button class="lang-toggle-btn" id="aboutTamBtn" onclick="setPageLang('about','tam')">தமிழ்</button>
+      </div>
+    </div>
+
+    <!-- ENGLISH CONTENT -->
+    <div id="aboutEng">
+      <div class="about-hero">
+        <div class="about-logo-large">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="aboutGold" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#f0d88a"/>
+                <stop offset="0.5" stop-color="#c9a84c"/>
+                <stop offset="1" stop-color="#9a7a30"/>
+              </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="46" stroke="url(#aboutGold)" stroke-width="1.5" stroke-dasharray="5 8" opacity="0.4"/>
+            <circle cx="50" cy="50" r="35" stroke="url(#aboutGold)" stroke-width="0.8" opacity="0.2"/>
+            <circle cx="50" cy="4" r="3" fill="url(#aboutGold)" opacity="0.6"/>
+            <circle cx="50" cy="96" r="3" fill="url(#aboutGold)" opacity="0.6"/>
+            <circle cx="4" cy="50" r="3" fill="url(#aboutGold)" opacity="0.6"/>
+            <circle cx="96" cy="50" r="3" fill="url(#aboutGold)" opacity="0.6"/>
+            <circle cx="18" cy="18" r="2" fill="url(#aboutGold)" opacity="0.4"/>
+            <circle cx="82" cy="18" r="2" fill="url(#aboutGold)" opacity="0.4"/>
+            <circle cx="18" cy="82" r="2" fill="url(#aboutGold)" opacity="0.4"/>
+            <circle cx="82" cy="82" r="2" fill="url(#aboutGold)" opacity="0.4"/>
+            <rect x="47" y="24" width="6" height="52" rx="3" fill="url(#aboutGold)"/>
+            <rect x="22" y="26" width="56" height="5" rx="2.5" fill="url(#aboutGold)"/>
+            <line x1="28" y1="31" x2="28" y2="50" stroke="url(#aboutGold)" stroke-width="2"/>
+            <line x1="72" y1="31" x2="72" y2="50" stroke="url(#aboutGold)" stroke-width="2"/>
+            <path d="M18 50 Q28 65 38 50" stroke="url(#aboutGold)" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M62 50 Q72 65 82 50" stroke="url(#aboutGold)" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <circle cx="50" cy="24" r="5" fill="url(#aboutGold)"/>
+            <rect x="34" y="72" width="32" height="5" rx="2.5" fill="url(#aboutGold)"/>
+            <rect x="24" y="76" width="52" height="3" rx="1.5" fill="url(#aboutGold)" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="about-name-tamil">அறம்</div>
+        <div class="about-name-meaning">"அறம்" — Tamil word for Righteousness, Justice, and Dharma</div>
+        <p class="about-description">
+          ARAM is an AI-powered legal awareness assistant built to help Indian citizens —
+          especially from Tamil Nadu — understand their rights under Indian law.
+          Calm, clear, and accessible in three languages.
+        </p>
+      </div>
+
+      <div class="about-content">
+        <div class="about-card">
+          <div class="about-card-header">
+            <div class="about-card-icon">📊</div>
+            <div class="about-card-title">ARAM by Numbers</div>
+          </div>
+          <div class="stats-row">
+            <div class="stat-item"><div class="stat-number">13</div><div class="stat-label">Legal Intents</div></div>
+            <div class="stat-item"><div class="stat-number">3</div><div class="stat-label">Languages</div></div>
+            <div class="stat-item"><div class="stat-number">3</div><div class="stat-label">Laws Covered</div></div>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-header">
+            <div class="about-card-icon">🎯</div>
+            <div class="about-card-title">Our Mission</div>
+          </div>
+          <div class="about-card-body">
+            <div class="mission-list">
+              <div class="mission-item"><div class="mission-dot"></div><div class="mission-text">Reduce fear around the legal system for everyday citizens</div></div>
+              <div class="mission-item"><div class="mission-dot"></div><div class="mission-text">Provide calm, structured guidance in Tamil, English, and Tanglish</div></div>
+              <div class="mission-item"><div class="mission-dot"></div><div class="mission-text">Help people understand their rights before approaching lawyers</div></div>
+              <div class="mission-item"><div class="mission-dot"></div><div class="mission-text">Encourage documentation and peaceful resolution first</div></div>
+              <div class="mission-item"><div class="mission-dot"></div><div class="mission-text">Make legal awareness accessible to every citizen — free of cost</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-header">
+            <div class="about-card-icon">🌐</div>
+            <div class="about-card-title">Language Support</div>
+          </div>
+          <div class="about-card-body">
+            ARAM understands and responds in three languages.
+            Simply type in whichever language feels natural to you.
+            <div class="lang-support">
+              <div class="lang-tag english">🇬🇧 English</div>
+              <div class="lang-tag tamil">🇮🇳 தமிழ்</div>
+              <div class="lang-tag tanglish">💬 Tanglish</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-header">
+            <div class="about-card-icon">⚙️</div>
+            <div class="about-card-title">How ARAM Works</div>
+          </div>
+          <div class="about-card-body">
+            <div class="mission-list">
+              <div class="mission-item"><div class="mission-dot"></div><div class="mission-text"><strong style="color:var(--gold-400)">Language Detection</strong> — Identifies whether you typed in English, Tamil script, or Tanglish</div></div>
+              <div class="mission-item"><div class="mission-dot"></div><div class="mission-text"><strong style="color:var(--gold-400)">Hybrid AI</strong> — Combines rule-based keyword matching with a trained ML classifier (78% accuracy)</div></div>
+              <div class="mission-item"><div class="mission-dot"></div><div class="mission-text"><strong style="color:var(--gold-400)">Legal Knowledge Base</strong> — Retrieves detailed information from curated law documents</div></div>
+              <div class="mission-item"><div class="mission-dot"></div><div class="mission-text"><strong style="color:var(--gold-400)">Learning System</strong> — Every conversation is logged for continuous improvement</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-card" style="border-color:rgba(201,168,76,0.2);background:rgba(201,168,76,0.03);">
+          <div class="about-card-header">
+            <div class="about-card-icon">⚖️</div>
+            <div class="about-card-title">Important Disclaimer</div>
+          </div>
+          <div class="about-card-body">
+            ARAM provides <strong style="color:var(--gold-400)">legal awareness and general guidance only</strong>.
+            It is not a substitute for professional legal advice. For legal representation,
+            please consult a qualified lawyer or approach your District Legal Services Authority.
+            <br><br>Free legal aid helpline: <strong style="color:var(--gold-400)">15100</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAMIL CONTENT -->
+    <div id="aboutTam" style="display:none;">
+      <div class="about-hero">
+        <div class="about-logo-large">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="aboutGold2" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#f0d88a"/>
+                <stop offset="0.5" stop-color="#c9a84c"/>
+                <stop offset="1" stop-color="#9a7a30"/>
+              </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="46" stroke="url(#aboutGold2)" stroke-width="1.5" stroke-dasharray="5 8" opacity="0.4"/>
+            <circle cx="50" cy="4" r="3" fill="url(#aboutGold2)" opacity="0.6"/>
+            <circle cx="50" cy="96" r="3" fill="url(#aboutGold2)" opacity="0.6"/>
+            <circle cx="4" cy="50" r="3" fill="url(#aboutGold2)" opacity="0.6"/>
+            <circle cx="96" cy="50" r="3" fill="url(#aboutGold2)" opacity="0.6"/>
+            <rect x="47" y="24" width="6" height="52" rx="3" fill="url(#aboutGold2)"/>
+            <rect x="22" y="26" width="56" height="5" rx="2.5" fill="url(#aboutGold2)"/>
+            <line x1="28" y1="31" x2="28" y2="50" stroke="url(#aboutGold2)" stroke-width="2"/>
+            <line x1="72" y1="31" x2="72" y2="50" stroke="url(#aboutGold2)" stroke-width="2"/>
+            <path d="M18 50 Q28 65 38 50" stroke="url(#aboutGold2)" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M62 50 Q72 65 82 50" stroke="url(#aboutGold2)" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <circle cx="50" cy="24" r="5" fill="url(#aboutGold2)"/>
+            <rect x="34" y="72" width="32" height="5" rx="2.5" fill="url(#aboutGold2)"/>
+          </svg>
+        </div>
+        <div class="about-name-tamil">அறம்</div>
+        <div class="about-name-meaning">"அறம்" — நேர்மை, நியாயம், தர்மம் என்று பொருள்படும் தமிழ் சொல்</div>
+        <p class="about-description">
+          அறம் (ARAM) என்பது இந்திய குடிமக்களுக்கு — குறிப்பாக தமிழ்நாட்டு மக்களுக்கு —
+          இந்திய சட்டங்களின் கீழ் தங்கள் உரிமைகளை புரிந்துகொள்ள உதவும்
+          AI-சார்ந்த சட்ட விழிப்புணர்வு உதவியாளர்.
+          மூன்று மொழிகளில் அமைதியாகவும் தெளிவாகவும் வழிகாட்டுகிறது.
+        </p>
+      </div>
+
+      <div class="about-content">
+        <div class="about-card">
+          <div class="about-card-header">
+            <div class="about-card-icon">📊</div>
+            <div class="about-card-title">அறம் — எண்களில்</div>
+          </div>
+          <div class="stats-row">
+            <div class="stat-item"><div class="stat-number">13</div><div class="stat-label">சட்ட வகைகள்</div></div>
+            <div class="stat-item"><div class="stat-number">3</div><div class="stat-label">மொழிகள்</div></div>
+            <div class="stat-item"><div class="stat-number">3</div><div class="stat-label">சட்டங்கள்</div></div>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-header">
+            <div class="about-card-icon">🎯</div>
+            <div class="about-card-title">எங்கள் நோக்கம்</div>
+          </div>
+          <div class="about-card-body">
+            <div class="mission-list">
+              <div class="mission-item"><div class="mission-dot"></div><div class="mission-text">சாதாரண குடிமக்களுக்கு சட்ட அமைப்பு மீதான பயத்தை குறைக்கவும்</div></div>
+              <div class="mission-item"><div class="mission-dot"></div><div class="mission-text">தமிழ், ஆங்கிலம், தங்கிலிஷ் மூன்றிலும் அமைதியான வழிகாட்டுதல் தரவும்</div></div>
+              <div class="mission-item"><div class="mission-dot"></div><div class="mission-text">வழக்கறிஞரை அணுகுவதற்கு முன் தங்கள் உரிமைகளை புரிந்துகொள்ள உதவியும்</div></div>
+              <div class="mission-item"><div class="mission-dot"></div><div class="mission-text">ஆவணப்படுத்துதலும் அமைதியான தீர்வும் முதலில் ஊக்குவிக்கவும்</div></div>
+              <div class="mission-item"><div class="mission-dot"></div><div class="mission-text">எல்லா குடிமக்களுக்கும் இலவசமாக சட்ட விழிப்புணர்வை கொண்டு செல்லவும்</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-header">
+            <div class="about-card-icon">🌐</div>
+            <div class="about-card-title">மொழி ஆதரவு</div>
+          </div>
+          <div class="about-card-body">
+            அறம் மூன்று மொழிகளில் புரிந்துகொண்டு பதிலளிக்கும்.
+            உங்களுக்கு இயல்பாக தோன்றும் மொழியில் தட்டச்சு செய்யுங்கள்.
+            <div class="lang-support">
+              <div class="lang-tag english">🇬🇧 English</div>
+              <div class="lang-tag tamil">🇮🇳 தமிழ்</div>
+              <div class="lang-tag tanglish">💬 Tanglish</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-header">
+            <div class="about-card-icon">⚙️</div>
+            <div class="about-card-title">அறம் எப்படி செயல்படுகிறது?</div>
+          </div>
+          <div class="about-card-body">
+            <div class="mission-list">
+              <div class="mission-item"><div class="mission-dot"></div><div class="mission-text"><strong style="color:var(--gold-400)">மொழி கண்டறிதல்</strong> — ஆங்கிலம், தமிழ் அல்லது தங்கிலிஷ் என்று தானாக அறியும்</div></div>
+              <div class="mission-item"><div class="mission-dot"></div><div class="mission-text"><strong style="color:var(--gold-400)">Hybrid AI</strong> — விதி-அடிப்படையிலான பொருத்தம் + பயிற்சி பெற்ற ML மாதிரி (78% துல்லியம்)</div></div>
+              <div class="mission-item"><div class="mission-dot"></div><div class="mission-text"><strong style="color:var(--gold-400)">சட்ட அறிவுத் தளம்</strong> — தேர்ந்தெடுக்கப்பட்ட சட்ட ஆவணங்களிலிருந்து விரிவான தகவல்கள்</div></div>
+              <div class="mission-item"><div class="mission-dot"></div><div class="mission-text"><strong style="color:var(--gold-400)">கற்றல் அமைப்பு</strong> — ஒவ்வொரு உரையாடலும் தொடர் முன்னேற்றத்திற்கு பதிவு செய்யப்படுகிறது</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-card" style="border-color:rgba(201,168,76,0.2);background:rgba(201,168,76,0.03);">
+          <div class="about-card-header">
+            <div class="about-card-icon">⚖️</div>
+            <div class="about-card-title">முக்கியமான அறிவிப்பு</div>
+          </div>
+          <div class="about-card-body">
+            அறம் <strong style="color:var(--gold-400)">சட்ட விழிப்புணர்வு மற்றும் பொது வழிகாட்டுதல் மட்டுமே</strong> வழங்குகிறது.
+            இது தொழில்முறை சட்ட ஆலோசனைக்கு மாற்றாகாது. சட்ட பிரதிநிதித்துவத்திற்கு,
+            தகுதியான வழக்கறிஞரை அணுகவும் அல்லது மாவட்ட சட்ட சேவை ஆணையத்தை
+            இலவச சட்ட உதவிக்கு அணுகவும்.
+            <br><br>இலவச சட்ட உதவி: <strong style="color:var(--gold-400)">15100</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══ LAWS PAGE ══ -->
+  <div class="page" id="lawsPage">
+
+    <!-- Language Toggle -->
+    <div class="lang-toggle-bar">
+      <span class="lang-toggle-label">Page Language:</span>
+      <div class="lang-toggle">
+        <button class="lang-toggle-btn active" id="lawsEngBtn" onclick="setPageLang('laws','eng')">ENG</button>
+        <button class="lang-toggle-btn" id="lawsTamBtn" onclick="setPageLang('laws','tam')">தமிழ்</button>
+      </div>
+    </div>
+
+    <!-- ENGLISH LAWS -->
+    <div id="lawsEng">
+      <div class="laws-hero">
+        <div class="laws-hero-title">Laws <span>ARAM</span> Uses</div>
+        <p class="laws-hero-sub">
+          ARAM provides awareness under three major Indian laws.
+          Click each law to learn more about what it covers.
+        </p>
+      </div>
+      <div class="laws-content">
+
+        <div class="law-card consumer" id="law1">
+          <div class="law-card-header" onclick="toggleLaw('law1')">
+            <div class="law-badge consumer">🛒</div>
+            <div class="law-title-group">
+              <div class="law-name">Consumer Protection Act</div>
+              <div class="law-year">ACT · 2019 · CENTRAL GOVERNMENT</div>
+            </div>
+            <div class="law-expand">▼</div>
+          </div>
+          <div class="law-card-body">
+            <p class="law-description">
+              Protects the rights and interests of consumers in India against
+              unfair trade practices, defective goods, and deficient services.
+              Includes e-commerce regulations and faster dispute resolution.
+            </p>
+            <div class="law-covers consumer">
+              <div class="law-cover-item consumer"><div class="law-cover-dot consumer"></div>Refund not received</div>
+              <div class="law-cover-item consumer"><div class="law-cover-dot consumer"></div>Defective products</div>
+              <div class="law-cover-item consumer"><div class="law-cover-dot consumer"></div>Online shopping fraud</div>
+              <div class="law-cover-item consumer"><div class="law-cover-dot consumer"></div>Service deficiency</div>
+              <div class="law-cover-item consumer"><div class="law-cover-dot consumer"></div>Misleading advertisements</div>
+              <div class="law-cover-item consumer"><div class="law-cover-dot consumer"></div>Unfair trade practices</div>
+            </div>
+            <div class="law-helpline">📞 National Consumer Helpline: 1800-11-4000 (Free)</div>
+          </div>
+        </div>
+
+        <div class="law-card cyber" id="law2">
+          <div class="law-card-header" onclick="toggleLaw('law2')">
+            <div class="law-badge cyber">💻</div>
+            <div class="law-title-group">
+              <div class="law-name">Information Technology Act</div>
+              <div class="law-year">ACT · 2000 (AMENDED 2008) · CENTRAL GOVERNMENT</div>
+            </div>
+            <div class="law-expand">▼</div>
+          </div>
+          <div class="law-card-body">
+            <p class="law-description">
+              Provides legal framework for electronic commerce, cyber crime,
+              and digital communications. The 2008 amendment strengthened provisions
+              on hacking, identity theft, and online harassment.
+            </p>
+            <div class="law-covers cyber">
+              <div class="law-cover-item cyber"><div class="law-cover-dot cyber"></div>Cyber fraud & OTP scams</div>
+              <div class="law-cover-item cyber"><div class="law-cover-dot cyber"></div>Identity theft online</div>
+              <div class="law-cover-item cyber"><div class="law-cover-dot cyber"></div>Account hacking</div>
+              <div class="law-cover-item cyber"><div class="law-cover-dot cyber"></div>Online harassment</div>
+              <div class="law-cover-item cyber"><div class="law-cover-dot cyber"></div>Data misuse</div>
+              <div class="law-cover-item cyber"><div class="law-cover-dot cyber"></div>Phishing attacks</div>
+            </div>
+            <div class="law-helpline">📞 Cyber Crime Helpline: 1930 (24/7)</div>
+          </div>
+        </div>
+
+        <div class="law-card criminal" id="law3">
+          <div class="law-card-header" onclick="toggleLaw('law3')">
+            <div class="law-badge criminal">⚖️</div>
+            <div class="law-title-group">
+              <div class="law-name">Bharatiya Nyaya Sanhita</div>
+              <div class="law-year">BNS · 2023 · EFFECTIVE 1 JULY 2024</div>
+            </div>
+            <div class="law-expand">▼</div>
+          </div>
+          <div class="law-card-body">
+            <p class="law-description">
+              Replaces the 163-year-old Indian Penal Code with modern,
+              victim-friendly provisions. Effective 1st July 2024 with faster
+              trial timelines and updated definitions.
+            </p>
+            <div class="law-covers criminal">
+              <div class="law-cover-item criminal"><div class="law-cover-dot criminal"></div>Cheating & fraud</div>
+              <div class="law-cover-item criminal"><div class="law-cover-dot criminal"></div>Criminal intimidation</div>
+              <div class="law-cover-item criminal"><div class="law-cover-dot criminal"></div>Harassment</div>
+              <div class="law-cover-item criminal"><div class="law-cover-dot criminal"></div>Blackmail & extortion</div>
+              <div class="law-cover-item criminal"><div class="law-cover-dot criminal"></div>Stalking</div>
+              <div class="law-cover-item criminal"><div class="law-cover-dot criminal"></div>Workplace harassment</div>
+            </div>
+            <div class="law-helpline">📞 Free Legal Aid: 15100 | Emergency: 112</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TAMIL LAWS -->
+    <div id="lawsTam" style="display:none;">
+      <div class="laws-hero">
+        <div class="laws-hero-title"><span>அறம்</span> பயன்படுத்தும் சட்டங்கள்</div>
+        <p class="laws-hero-sub">
+          அறம் மூன்று முக்கிய இந்திய சட்டங்களின் கீழ் விழிப்புணர்வு வழங்குகிறது.
+          ஒவ்வொரு சட்டத்தையும் கிளிக் செய்து விவரங்களை அறியுங்கள்.
+        </p>
+      </div>
+      <div class="laws-content">
+
+        <div class="law-card consumer" id="law1t">
+          <div class="law-card-header" onclick="toggleLaw('law1t')">
+            <div class="law-badge consumer">🛒</div>
+            <div class="law-title-group">
+              <div class="law-name">நுகர்வோர் பாதுகாப்பு சட்டம்</div>
+              <div class="law-year">சட்டம் · 2019 · மத்திய அரசு</div>
+            </div>
+            <div class="law-expand">▼</div>
+          </div>
+          <div class="law-card-body">
+            <p class="law-description">
+              நியாயமற்ற வர்த்தக நடைமுறைகள், குறைபாடுள்ள பொருட்கள்,
+              தரமற்ற சேவைகள் ஆகியவற்றிலிருந்து இந்திய நுகர்வோரின்
+              உரிமைகளை பாதுகாக்கிறது. E-commerce விதிமுறைகளும்
+              விரைவான தீர்வு வழிமுறைகளும் இதில் உள்ளன.
+            </p>
+            <div class="law-covers consumer">
+              <div class="law-cover-item consumer"><div class="law-cover-dot consumer"></div>பணம் திரும்ப வரவில்லை</div>
+              <div class="law-cover-item consumer"><div class="law-cover-dot consumer"></div>குறைபாடுள்ள பொருட்கள்</div>
+              <div class="law-cover-item consumer"><div class="law-cover-dot consumer"></div>Online shopping மோசடி</div>
+              <div class="law-cover-item consumer"><div class="law-cover-dot consumer"></div>சேவை குறைபாடு</div>
+              <div class="law-cover-item consumer"><div class="law-cover-dot consumer"></div>தவறான விளம்பரங்கள்</div>
+              <div class="law-cover-item consumer"><div class="law-cover-dot consumer"></div>நியாயமற்ற வர்த்தகம்</div>
+            </div>
+            <div class="law-helpline">📞 நுகர்வோர் உதவி: 1800-11-4000 (இலவசம்)</div>
+          </div>
+        </div>
+
+        <div class="law-card cyber" id="law2t">
+          <div class="law-card-header" onclick="toggleLaw('law2t')">
+            <div class="law-badge cyber">💻</div>
+            <div class="law-title-group">
+              <div class="law-name">தகவல் தொழில்நுட்ப சட்டம்</div>
+              <div class="law-year">சட்டம் · 2000 (திருத்தம் 2008) · மத்திய அரசு</div>
+            </div>
+            <div class="law-expand">▼</div>
+          </div>
+          <div class="law-card-body">
+            <p class="law-description">
+              மின்னணு வணிகம், இணைய குற்றங்கள், டிஜிட்டல் தகவல் தொடர்புகளுக்கான
+              சட்ட கட்டமைப்பை வழங்குகிறது. 2008 திருத்தம் hacking,
+              அடையாள திருட்டு மற்றும் online தொல்லைகளுக்கான
+              விதிகளை வலுப்படுத்தியது.
+            </p>
+            <div class="law-covers cyber">
+              <div class="law-cover-item cyber"><div class="law-cover-dot cyber"></div>இணைய மோசடி & OTP ஏமாற்று</div>
+              <div class="law-cover-item cyber"><div class="law-cover-dot cyber"></div>Online அடையாள திருட்டு</div>
+              <div class="law-cover-item cyber"><div class="law-cover-dot cyber"></div>கணக்கு Hacking</div>
+              <div class="law-cover-item cyber"><div class="law-cover-dot cyber"></div>Online தொல்லை</div>
+              <div class="law-cover-item cyber"><div class="law-cover-dot cyber"></div>தரவு தவறான பயன்பாடு</div>
+              <div class="law-cover-item cyber"><div class="law-cover-dot cyber"></div>Phishing தாக்குதல்</div>
+            </div>
+            <div class="law-helpline">📞 இணைய குற்ற உதவி: 1930 (24 மணி நேரமும்)</div>
+          </div>
+        </div>
+
+        <div class="law-card criminal" id="law3t">
+          <div class="law-card-header" onclick="toggleLaw('law3t')">
+            <div class="law-badge criminal">⚖️</div>
+            <div class="law-title-group">
+              <div class="law-name">பாரதிய நியாய சங்கிதா</div>
+              <div class="law-year">BNS · 2023 · நடைமுறை: 1 ஜூலை 2024</div>
+            </div>
+            <div class="law-expand">▼</div>
+          </div>
+          <div class="law-card-body">
+            <p class="law-description">
+              163 ஆண்டுகள் பழமையான இந்திய தண்டனை சட்டத்தை (IPC)
+              நவீன, பாதிக்கப்பட்டவர் நட்பான விதிகளுடன் மாற்றுகிறது.
+              2024 ஜூலை 1 முதல் நடைமுறையில் உள்ளது.
+            </p>
+            <div class="law-covers criminal">
+              <div class="law-cover-item criminal"><div class="law-cover-dot criminal"></div>ஏமாற்றுதல் & மோசடி</div>
+              <div class="law-cover-item criminal"><div class="law-cover-dot criminal"></div>மிரட்டல்</div>
+              <div class="law-cover-item criminal"><div class="law-cover-dot criminal"></div>தொல்லை</div>
+              <div class="law-cover-item criminal"><div class="law-cover-dot criminal"></div>மிரட்டி பணம் பறித்தல்</div>
+              <div class="law-cover-item criminal"><div class="law-cover-dot criminal"></div>Stalking</div>
+              <div class="law-cover-item criminal"><div class="law-cover-dot criminal"></div>பணியிட தொல்லை</div>
+            </div>
+            <div class="law-helpline">📞 இலவச சட்ட உதவி: 15100 | அவசரம்: 112</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══ BOTTOM BAR ══ -->
+  <div class="bottom-bar">
+    ⚖️ அறம் (ARAM) — சட்ட விழிப்புணர்வு மட்டுமே · சட்ட ஆலோசனை அல்ல ·
+    தொழில்முறை வழக்கறிஞரை அணுகவும்
+  </div>
+
+</div>
+
+<script src="/static/js/chat.js"></script>
+</body>
+</html>

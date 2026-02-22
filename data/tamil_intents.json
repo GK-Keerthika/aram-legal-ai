@@ -1,0 +1,177 @@
+{
+  "tamil_intents": [
+
+    {
+      "intent_id": "CP001",
+      "tamil_keywords": [
+        "பணம் திரும்ப", "ரீஃபண்ட்", "பணம் வரவில்லை",
+        "பணம் கொடுக்கவில்லை", "திரும்ப கொடு",
+        "பண வாபஸ்", "refund வரவில்லை", "பணம் எங்கே"
+      ],
+      "tanglish_keywords": [
+        "panam thirumba", "refund kudukala", "panam varalai",
+        "thirupa kudukala", "money return pannala",
+        "panam wapas", "refund varala", "pana thirupa"
+      ]
+    },
+
+    {
+      "intent_id": "CP002",
+      "tamil_keywords": [
+        "பொருள் கெட்டது", "சேதமான பொருள்", "வேலை செய்யவில்லை",
+        "தரமற்ற பொருள்", "உடைந்த பொருள்", "குறைபாடுள்ள பொருள்",
+        "பொருள் சரியில்லை", "கெட்ட பொருள்"
+      ],
+      "tanglish_keywords": [
+        "porul keduthal", "item damage achu", "work pannala",
+        "quality illa", "broken item", "defective porul",
+        "porul sari illa", "kedu porul"
+      ]
+    },
+
+    {
+      "intent_id": "CP003",
+      "tamil_keywords": [
+        "ஆர்டர் வரவில்லை", "டெலிவரி இல்லை", "online மோசடி",
+        "பொருள் வரவில்லை", "போலி website", "ஏமாற்றினார்கள்",
+        "பணம் கொடுத்தேன் பொருள் வரவில்லை"
+      ],
+      "tanglish_keywords": [
+        "order varala", "delivery illa", "online fraud",
+        "porul varalai", "fake website", "emattinanga",
+        "panam kuduthen porul varala", "online shopping problem"
+      ]
+    },
+
+    {
+      "intent_id": "CP004",
+      "tamil_keywords": [
+        "சேவை சரியில்லை", "வேலை முடிக்கவில்லை", "சேவை கிடைக்கவில்லை",
+        "தரமற்ற சேவை", "சேவை நிறுவனம் ஏமாற்றியது"
+      ],
+      "tanglish_keywords": [
+        "service sari illa", "work mudikaala", "service kidaikala",
+        "service problem", "contractor emattaan"
+      ]
+    },
+
+    {
+      "intent_id": "IT001",
+      "tamil_keywords": [
+        "இணைய மோசடி", "online மோசடி", "பணம் திருடினார்கள்",
+        "OTP கொடுத்தேன்", "வங்கி மோசடி", "UPI மோசடி",
+        "போலி அழைப்பு", "பணம் போய்விட்டது", "கணக்கில் பணம் இல்லை"
+      ],
+      "tanglish_keywords": [
+        "online fraud", "panam thirudittanga", "otp kuduthen",
+        "bank fraud", "upi fraud", "fake call vanduchu",
+        "panam pochu", "account la panam illa",
+        "cyber fraud achu", "scam achu"
+      ]
+    },
+
+    {
+      "intent_id": "IT002",
+      "tamil_keywords": [
+        "போலி கணக்கு", "என் பெயரில் கணக்கு", "என் படம் பயன்படுத்துகிறார்கள்",
+        "அடையாள திருட்டு", "போலி profile", "என்னை போல் நடிக்கிறார்கள்"
+      ],
+      "tanglish_keywords": [
+        "fake account", "en peyrula account", "en photo use panranga",
+        "identity theft", "fake profile", "enna maadhiri nadikiran",
+        "impersonation", "en photo misuse"
+      ]
+    },
+
+    {
+      "intent_id": "IT003",
+      "tamil_keywords": [
+        "online துன்புறுத்தல்", "இணைய தொல்லை", "அச்சுறுத்தல் செய்திகள்",
+        "ஆபாச செய்திகள்", "சமூக வலைதளத்தில் தொல்லை",
+        "cyberbullying", "online harassment"
+      ],
+      "tanglish_keywords": [
+        "online harassment", "cyber bullying", "threatening message vanduchu",
+        "abusive message", "social media la thondara",
+        "whatsapp la thondara", "vulgar message"
+      ]
+    },
+
+    {
+      "intent_id": "IT004",
+      "tamil_keywords": [
+        "கணக்கு hack ஆனது", "யாரோ என் கணக்கில் நுழைந்தார்கள்",
+        "password மாறிவிட்டது", "email hack", "phone hack",
+        "unauthorized access", "கணக்கு திருடப்பட்டது"
+      ],
+      "tanglish_keywords": [
+        "account hack achu", "yaaro en account la punnudhinga",
+        "password maari pochu", "email hack achu",
+        "phone hack achu", "account stolen",
+        "hack pannittaan", "account vandutanga"
+      ]
+    },
+
+    {
+      "intent_id": "BNS001",
+      "tamil_keywords": [
+        "ஏமாற்றினார்கள்", "பொய் சொன்னார்கள்", "பணம் எடுத்துக்கொண்டார்கள்",
+        "நம்பி ஏமாந்தேன்", "போலி வாக்குறுதி", "மோசடி செய்தார்கள்",
+        "பணம் திரும்ப கொடுக்கவில்லை", "ஏமாற்று வேலை"
+      ],
+      "tanglish_keywords": [
+        "emattinaan", "poi sonnaan", "panam eduthuttaan",
+        "nambhi emanthen", "fake promise", "mosadi pannaan",
+        "panam thirumba kudukala", "emattu velai",
+        "conned", "tricked pannittaan"
+      ]
+    },
+
+    {
+      "intent_id": "BNS002",
+      "tamil_keywords": [
+        "மிரட்டுகிறார்கள்", "பயமுறுத்துகிறார்கள்", "அச்சுறுத்துகிறார்கள்",
+        "blackmail செய்கிறார்கள்", "உயிருக்கு ஆபத்து",
+        "தீங்கு செய்வதாக சொன்னார்கள்", "மிரட்டல்"
+      ],
+      "tanglish_keywords": [
+        "mirattukiranga", "bayamurutukiranga", "threaten panranga",
+        "blackmail panranga", "life ku aapathu",
+        "harm panvanga sonnanga", "mirattal",
+        "threatening call", "extortion"
+      ]
+    },
+
+    {
+      "intent_id": "BNS003",
+      "tamil_keywords": [
+        "தொல்லை செய்கிறார்கள்", "துன்புறுத்துகிறார்கள்",
+        "மனசை கஷ்டப்படுத்துகிறார்கள்", "workplace தொல்லை",
+        "அண்டை வீட்டார் தொல்லை", "mental torture",
+        "திரும்ப திரும்ப தொல்லை"
+      ],
+      "tanglish_keywords": [
+        "thondara pannukiranga", "thunburutukiranga",
+        "manasa kastha paduthukiranga", "office la thondara",
+        "neighbour thondara", "mental torture",
+        "repeated harassment", "boss thondara pannukiraan"
+      ]
+    },
+
+    {
+      "intent_id": "GUIDE001",
+      "tamil_keywords": [
+        "புகார் செய்வது எப்படி", "எங்கே புகார் செய்வது",
+        "என்ன செய்வது", "உதவி வேண்டும்", "வழிகாட்டுங்கள்",
+        "சட்ட உதவி", "police complaint", "புகார் process"
+      ],
+      "tanglish_keywords": [
+        "complaint pannaradhu epdi", "enga complaint pannanum",
+        "enna pannanum", "udhavi venum", "vazhi kaattunga",
+        "legal help", "police complaint epdi",
+        "complaint process sollunga"
+      ]
+    }
+
+  ]
+}

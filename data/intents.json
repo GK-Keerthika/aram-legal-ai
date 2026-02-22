@@ -1,0 +1,436 @@
+{
+  "intents": [
+
+    {
+      "intent_id": "CP001",
+      "intent_description": "Refund not received after purchase",
+      "keywords": [
+        "refund", "money not returned", "payment not refunded",
+        "refund pending", "no refund", "waiting for refund",
+        "refund rejected", "refund delayed", "want refund",
+        "money back", "return money", "get my money back",
+        "refund not processed", "refund status", "refund request",
+        "they wont refund", "seller not refunding", "refund issue",
+        "how to get refund", "claim refund", "refund denied"
+      ],
+      "mapped_law": "Consumer Protection Act, 2019",
+      "severity_level": "medium",
+      "simplified_explanation": "As a consumer, you have the right to receive a refund for defective goods or unsatisfactory services. A seller cannot legally withhold your refund without valid reason.",
+      "recommended_steps": [
+        "Collect all purchase receipts, order confirmations, and payment records.",
+        "Send a written refund request to the seller via email and keep a copy.",
+        "If no response in 7 days, escalate to the company's grievance officer.",
+        "File a complaint on the National Consumer Helpline at consumerhelpline.gov.in.",
+        "If unresolved, approach your District Consumer Disputes Redressal Commission."
+      ],
+      "response_template": [
+        "It sounds like you haven't received your refund yet. This is a common consumer concern and you have clear rights here. Let me walk you through what you can do.",
+        "Not getting a refund you're owed is genuinely frustrating. Consumer protection provisions are designed exactly for this. Here are your options.",
+        "I understand this is stressful. Refund delays or denials are something consumer law specifically addresses. Let's go through your next steps together.",
+        "You have every right to pursue this refund. Many people face this and there are clear official channels to resolve it. Here's what I recommend.",
+        "Refund issues are one of the most common consumer complaints. The good news is there's a clear process to follow. Let me guide you."
+      ]
+    },
+
+    {
+      "intent_id": "CP002",
+      "intent_description": "Received defective or damaged product",
+      "keywords": [
+        "defective product", "damaged item", "broken product",
+        "not working", "product damaged", "faulty item",
+        "received damaged", "product malfunction", "item broken",
+        "product stopped working", "quality issue", "bad quality",
+        "product not working", "damaged goods", "faulty product",
+        "item not working", "product defect", "stopped working",
+        "product bad", "not as described", "wrong product"
+      ],
+      "mapped_law": "Consumer Protection Act, 2019",
+      "severity_level": "medium",
+      "simplified_explanation": "Receiving a defective product is a violation of your consumer rights. You are entitled to a replacement, repair, or full refund depending on the situation.",
+      "recommended_steps": [
+        "Take photographs and videos of the defective product immediately.",
+        "Do not discard the packaging or any accessories.",
+        "Contact the seller or brand within the return/replacement window.",
+        "Send a formal written complaint to the seller with evidence attached.",
+        "Escalate to the National Consumer Helpline if the seller does not respond."
+      ],
+      "response_template": [
+        "Receiving a damaged or defective product is frustrating, and you have every right to seek a resolution. Let me walk you through the steps.",
+        "A defective product is not something you should simply accept. You are entitled to a replacement, repair, or refund. Here's how to proceed.",
+        "I'm sorry to hear your product arrived damaged. The law is clearly on your side here. Let me guide you through your options.",
+        "Product quality issues are taken seriously under consumer law. You have strong rights here. Here's exactly what you should do.",
+        "You shouldn't have to settle for a defective product. There are clear legal protections for exactly this situation."
+      ]
+    },
+
+    {
+      "intent_id": "CP003",
+      "intent_description": "Online shopping fraud or non-delivery of product",
+      "keywords": [
+        "order not delivered", "online fraud", "item not received",
+        "fake product", "scam website", "online shopping issue",
+        "product never arrived", "delivery not done", "not delivered",
+        "package not received", "order missing", "delivery failed",
+        "fake website", "online scam", "shopping fraud",
+        "paid but not delivered", "order cancelled without refund",
+        "e-commerce fraud", "flipkart issue", "amazon issue",
+        "meesho issue", "online purchase problem"
+      ],
+      "mapped_law": "Consumer Protection Act, 2019",
+      "severity_level": "high",
+      "simplified_explanation": "If you paid for a product online and it was never delivered, or if the platform was fraudulent, you are protected under consumer law and may also have recourse under cyber law.",
+      "recommended_steps": [
+        "Save all order confirmations, payment receipts, and chat records.",
+        "Report the issue to the e-commerce platform's customer support in writing.",
+        "File a complaint at consumerhelpline.gov.in with all evidence.",
+        "If fraud is suspected, also report to cybercrime.gov.in.",
+        "Contact your bank for a chargeback if payment was made by card."
+      ],
+      "response_template": [
+        "Not receiving an order you paid for is a serious consumer issue. Both consumer protection and cyber law provisions may apply here.",
+        "Online shopping fraud is unfortunately common, but you have strong legal protections. Let's make sure you take the right steps quickly.",
+        "I understand how alarming this situation is. There are official channels specifically designed to handle exactly this kind of issue.",
+        "This is a clear violation of your consumer rights. The good news is there are multiple official channels to get this resolved.",
+        "Whether this is a delivery failure or outright fraud, you have legal options. Let me walk you through them step by step."
+      ]
+    },
+
+    {
+      "intent_id": "CP004",
+      "intent_description": "Poor service quality or service not provided",
+      "keywords": [
+        "bad service", "service not provided", "service deficiency",
+        "poor quality service", "service not completed",
+        "cheated by service provider", "service complaint",
+        "service issue", "poor service", "service not done",
+        "work not completed", "contractor problem", "service center",
+        "repair not done", "technician issue", "service denied",
+        "incomplete work", "service provider cheated"
+      ],
+      "mapped_law": "Consumer Protection Act, 2019",
+      "severity_level": "low",
+      "simplified_explanation": "If you paid for a service and it was not delivered as promised, this is considered a service deficiency under consumer law. You can seek compensation or a redo of the service.",
+      "recommended_steps": [
+        "Document exactly what was promised versus what was delivered.",
+        "Contact the service provider in writing explaining the deficiency.",
+        "Request a resolution — either completion of service or refund.",
+        "If no resolution, file on the National Consumer Helpline portal.",
+        "Keep all invoices, agreements, and communication as evidence."
+      ],
+      "response_template": [
+        "It seems the service you paid for did not meet expectations. Consumer provisions give you clear options here.",
+        "A service deficiency is taken seriously under consumer law. You paid for something and deserve to receive it properly.",
+        "This is a recognized consumer concern and you have every right to seek resolution. Let's go through your options.",
+        "Poor service quality is something consumer law specifically addresses. You have the right to demand what was promised.",
+        "You shouldn't have to accept incomplete or poor quality service. Here are your practical options to resolve this."
+      ]
+    },
+
+    {
+      "intent_id": "IT001",
+      "intent_description": "Cyber fraud or online financial fraud",
+      "keywords": [
+        "cyber fraud", "online fraud", "money stolen online",
+        "bank fraud", "upi fraud", "otp fraud", "phishing",
+        "fake call", "scam call", "fraud transaction",
+        "money deducted", "unauthorized transaction", "lost money online",
+        "phone pe fraud", "gpay fraud", "google pay fraud",
+        "net banking fraud", "credit card fraud", "debit card fraud",
+        "someone took my money", "money gone from account",
+        "fake bank call", "got scammed", "online theft"
+      ],
+      "mapped_law": "Information Technology Act, 2000",
+      "severity_level": "high",
+      "simplified_explanation": "Online financial fraud is a serious cyber offence. If someone tricked you into sharing your OTP, bank details, or made unauthorized transactions, you have legal protection and must act quickly.",
+      "recommended_steps": [
+        "Immediately call your bank's helpline and freeze your account if needed.",
+        "Report to the National Cyber Crime portal at cybercrime.gov.in within 24 hours.",
+        "Call the cyber crime helpline number 1930 immediately.",
+        "Take screenshots of all suspicious messages, calls, and transactions.",
+        "File a written complaint at your nearest police station as well."
+      ],
+      "response_template": [
+        "This sounds like online financial fraud. Please do not panic — there are official channels to report this quickly. Time is important here.",
+        "Online fraud is a serious cyber offence and authorities take it very seriously. The most important thing right now is to act quickly.",
+        "I understand this is deeply distressing. Financial fraud can feel overwhelming but there are clear immediate steps that can help.",
+        "This is unfortunately a common crime but the law provides strong protection. Let me give you the immediate steps to take.",
+        "Every minute counts in fraud cases. Let me walk you through exactly what to do right now to protect yourself."
+      ]
+    },
+
+    {
+      "intent_id": "IT002",
+      "intent_description": "Identity theft or impersonation online",
+      "keywords": [
+        "identity theft", "someone using my name", "fake account",
+        "impersonation", "fake profile", "someone pretending to be me",
+        "my photos misused", "morphed photos", "fake id",
+        "someone created account in my name", "misusing my identity",
+        "fake instagram", "fake facebook", "fake whatsapp",
+        "someone using my photos", "digital identity stolen",
+        "profile misused", "name misused online"
+      ],
+      "mapped_law": "Information Technology Act, 2000",
+      "severity_level": "high",
+      "simplified_explanation": "Creating a fake profile or using someone's identity without consent is a punishable cyber offence. You have the right to report this and have it removed.",
+      "recommended_steps": [
+        "Take screenshots of the fake profile or impersonation immediately.",
+        "Report the fake account directly to the platform (Facebook, Instagram, etc.).",
+        "File a complaint at cybercrime.gov.in under the Report Other Cyber Crime section.",
+        "Call cyber crime helpline 1930 to register your concern.",
+        "Inform your close contacts so they are not misled by the fake account."
+      ],
+      "response_template": [
+        "Having your identity misused online is distressing, but you have clear legal protections. Let's focus on the steps to address this safely.",
+        "Identity theft and impersonation are serious cyber offences. You have the right to have this removed and the person reported.",
+        "This is a violation of your digital rights and the law recognizes that clearly. Let me guide you through your options.",
+        "Your digital identity is protected by law. Someone misusing it is committing a cyber offence. Here's how to respond.",
+        "This kind of violation feels very personal. Let's focus on practical steps to get this resolved quickly and safely."
+      ]
+    },
+
+    {
+      "intent_id": "IT003",
+      "intent_description": "Online harassment or cyberbullying",
+      "keywords": [
+        "online harassment", "cyberbullying", "trolling",
+        "threatening messages", "abusive messages online",
+        "harassment on social media", "someone threatening me online",
+        "obscene messages", "vulgar messages", "abusive comments",
+        "bullying online", "targeted harassment", "hate messages",
+        "disturbing messages", "unwanted messages", "stalking online",
+        "instagram harassment", "whatsapp harassment",
+        "facebook harassment", "youtube comments harassment"
+      ],
+      "mapped_law": "Information Technology Act, 2000",
+      "severity_level": "medium",
+      "simplified_explanation": "Sending threatening, abusive, or obscene messages online is a cyber offence. You do not have to tolerate harassment and have the right to report it officially.",
+      "recommended_steps": [
+        "Do not respond to the harasser — preserve all messages as evidence.",
+        "Take screenshots with timestamps of all harassing content.",
+        "Block the person on the platform and report their account.",
+        "File a complaint at cybercrime.gov.in.",
+        "If threats feel serious or physical, also approach your local police station."
+      ],
+      "response_template": [
+        "Online harassment is taken seriously under cyber law. You are not alone in this and there are proper channels to address it.",
+        "Nobody should have to tolerate harassment of any kind. The law provides clear protections for exactly this situation.",
+        "I hear you — online harassment is genuinely distressing. Let's focus on practical steps to address this safely.",
+        "What you're experiencing is not okay and it is illegal. You have every right to take action. Here's what to do.",
+        "Online harassment can feel overwhelming but you have real legal tools to fight back safely and effectively."
+      ]
+    },
+
+    {
+      "intent_id": "IT004",
+      "intent_description": "Hacking or unauthorized access to account",
+      "keywords": [
+        "hacked", "hacking", "hack", "account hacked",
+        "someone accessed my account", "unauthorized login",
+        "my email hacked", "my phone hacked",
+        "someone logged into my account", "data breach",
+        "unauthorized access", "breached", "compromised",
+        "gmail hacked", "instagram hacked", "facebook hacked",
+        "whatsapp hacked", "phone compromised", "account taken over",
+        "lost access to account", "someone changed my password",
+        "unknown login", "suspicious login", "account stolen"
+      ],
+      "mapped_law": "Information Technology Act, 2000",
+      "severity_level": "high",
+      "simplified_explanation": "Unauthorized access to any computer, phone, or online account is a cyber offence. If someone hacked into your account, you have legal recourse.",
+      "recommended_steps": [
+        "Immediately change your passwords for all important accounts.",
+        "Enable two-factor authentication on all accounts.",
+        "Check and remove any unknown devices linked to your accounts.",
+        "Report to cybercrime.gov.in with screenshots and details.",
+        "Inform your bank if any financial accounts were accessed."
+      ],
+      "response_template": [
+        "Unauthorized access to your account is a serious cyber offence. Let's secure you first, then take the right steps to report it.",
+        "Account hacking is treated seriously under cyber law. First priority is securing your accounts, then reporting officially.",
+        "This is a violation of your digital security and you have legal recourse. Let me walk you through the immediate steps.",
+        "Getting hacked is a frightening experience. Let's focus on securing your accounts first, then getting justice.",
+        "Your accounts are protected by law. Someone breaking into them has committed a crime. Here's how to respond right now."
+      ]
+    },
+
+    {
+      "intent_id": "BNS001",
+      "intent_description": "Cheating or fraud by a person or business",
+      "keywords": [
+        "cheated", "cheating", "cheat", "fraud", "frauded",
+        "deceived", "deception", "false promise", "took my money",
+        "did not deliver what was promised", "someone cheated me",
+        "business fraud", "fake deal", "money taken and disappeared",
+        "betrayed", "swindled", "conned", "tricked", "tricked me",
+        "trick", "lied to me", "misled", "false information",
+        "fake investment", "ponzi scheme", "money not returned",
+        "advance taken not returned", "contractor ran away",
+        "agent cheated", "broker fraud", "real estate fraud"
+      ],
+      "mapped_law": "Bharatiya Nyaya Sanhita (BNS), 2023",
+      "severity_level": "high",
+      "simplified_explanation": "If someone intentionally deceived you to take your money or property with no intention of fulfilling their promise, this falls under cheating provisions. You have the right to file a formal complaint.",
+      "recommended_steps": [
+        "Write down the full sequence of events clearly with dates.",
+        "Collect all evidence — messages, receipts, agreements, and call records.",
+        "Send a formal written demand to the person asking them to return what is owed.",
+        "If no response, file a complaint at your nearest police station.",
+        "You may also consult a legal aid center for free guidance on next steps."
+      ],
+      "response_template": [
+        "Being cheated or deceived is a serious matter and the law recognizes your right to seek justice. Let me walk you through what you can do.",
+        "Intentional deception for financial gain is a recognized offence. The most important thing right now is to document everything carefully.",
+        "I understand how betrayed you must feel. This situation has clear legal provisions that protect you.",
+        "What happened to you is not acceptable and the law is on your side. Let me guide you through the steps to get justice.",
+        "Being deceived by someone you trusted is painful. But you have clear legal recourse. Here's how to proceed."
+      ]
+    },
+
+    {
+      "intent_id": "BNS002",
+      "intent_description": "Criminal intimidation or threatening behavior",
+      "keywords": [
+        "threatening me", "someone threatened me", "getting threats",
+        "fear for safety", "intimidation", "blackmail",
+        "someone scaring me", "threatening calls", "threat messages",
+        "being blackmailed", "threatened", "threatening",
+        "i am being threatened", "being threatened", "threat",
+        "someone is threatening", "scared of someone", "fear",
+        "they threatened", "being threatened", "got threats",
+        "threatened by someone", "extortion", "being extorted",
+        "someone will harm me", "threatening my family",
+        "death threat", "physical threat", "threatening whatsapp"
+      ],
+      "mapped_law": "Bharatiya Nyaya Sanhita (BNS), 2023",
+      "severity_level": "high",
+      "simplified_explanation": "Threatening someone with harm — whether physical, financial, or to reputation — is a criminal offence. You do not have to face this alone and you have the right to report it immediately.",
+      "recommended_steps": [
+        "Do not engage or respond to the threats — stay calm and safe.",
+        "Save all threatening messages, voicemails, or emails as evidence.",
+        "Inform a trusted family member or friend about the situation.",
+        "File a complaint at your nearest police station immediately.",
+        "If you feel your physical safety is at risk, contact emergency services on 112."
+      ],
+      "response_template": [
+        "Receiving threats is frightening, but please know that the law takes this very seriously. Your safety is the first priority.",
+        "You do not have to face threatening behavior alone. This is a criminal matter and there are immediate steps to protect yourself.",
+        "I understand this feels very scary. Threatening behavior is a serious offence and authorities are equipped to handle this.",
+        "Your safety matters above everything else. Let me first make sure you know the immediate steps to protect yourself.",
+        "What you're experiencing is a criminal offence. You have every right to seek protection. Here's what to do right now."
+      ]
+    },
+
+    {
+      "intent_id": "BNS003",
+      "intent_description": "Harassment by a person or group",
+      "keywords": [
+        "harassment", "being harassed", "someone harassing me",
+        "workplace harassment", "neighbor harassment",
+        "repeated harassment", "mental harassment",
+        "someone troubling me", "constant harassment",
+        "office harassment", "boss harassing", "colleague harassing",
+        "landlord harassing", "stalking", "being followed",
+        "mental torture", "emotional abuse", "domestic trouble",
+        "continuously troubling", "daily harassment",
+        "group harassment", "mob harassment"
+      ],
+      "mapped_law": "Bharatiya Nyaya Sanhita (BNS), 2023",
+      "severity_level": "medium",
+      "simplified_explanation": "Repeated harassment — whether physical, verbal, or mental — is recognized under law. You have the right to seek protection and file a complaint against the person causing you distress.",
+      "recommended_steps": [
+        "Start maintaining a diary of every harassment incident with dates and details.",
+        "If workplace-related, report to your HR department or Internal Complaints Committee.",
+        "Collect any witnesses who have observed the harassment.",
+        "File a complaint at your local police station with your documented evidence.",
+        "Seek support from a legal aid center or women's helpline 1091 if needed."
+      ],
+      "response_template": [
+        "Harassment of any kind is unacceptable and you have legal protections available. The most important first step is to start documenting everything.",
+        "You have every right to live and work without being harassed. The law recognizes this clearly. Let me guide you through your options.",
+        "I'm sorry you're going through this. Repeated harassment is a recognized legal concern and there are concrete steps you can take.",
+        "Nobody should have to endure harassment. What you're experiencing is not normal and not acceptable. Here's how the law protects you.",
+        "You deserve to feel safe. Let me walk you through your legal options to stop this harassment properly."
+      ]
+    },
+
+    {
+      "intent_id": "GUIDE001",
+      "intent_description": "User wants to file a complaint or needs guidance",
+      "keywords": [
+        "file complaint", "how to complain", "where to complain",
+        "complaint process", "how to file", "register complaint",
+        "lodge complaint", "file a case", "how to report",
+        "where to report", "complaint procedure", "need help",
+        "guide me", "what should i do", "help me",
+        "need guidance", "what are my options", "what can i do",
+        "how to proceed", "next steps", "legal help",
+        "need advice", "dont know what to do", "confused",
+        "legal aid", "free legal help", "police complaint"
+      ],
+      "mapped_law": "General Guidance",
+      "severity_level": "low",
+      "simplified_explanation": "Filing a complaint is your right as a citizen. Depending on your situation, there are different official channels available — consumer forums, cyber crime portals, or police stations.",
+      "recommended_steps": [
+        "Identify the nature of your complaint — consumer, cyber, or criminal.",
+        "For consumer issues: visit consumerhelpline.gov.in or call 1800-11-4000.",
+        "For cyber issues: visit cybercrime.gov.in or call helpline 1930.",
+        "For criminal matters: visit your nearest police station with written complaint.",
+        "Always carry evidence — receipts, screenshots, messages — when filing."
+      ],
+      "response_template": [
+        "Filing a complaint is your right and I can guide you to the right channel. First tell me a bit more about your situation.",
+        "There are several official ways to file a complaint in India depending on your issue. Let me guide you to the most appropriate one.",
+        "You've taken the right step by seeking guidance. Here's how complaint filing works depending on your situation.",
+        "I'm here to help you navigate this. Different issues have different complaint channels. Let me help you find the right one.",
+        "Don't worry — there are clear official processes for this. Let me walk you through your options step by step."
+      ]
+    },
+
+    {
+      "intent_id": "GREET001",
+      "intent_description": "User greeting",
+      "keywords": [
+        "hello", "hi", "hey", "good morning", "good evening",
+        "good afternoon", "good night", "namaste", "hii",
+        "greetings", "howdy", "morning", "evening", "afternoon",
+        "vanakkam", "vanakam", "vanakkom", "vankam", "vannakam",
+        "hai", "helo", "aram", "hi aram", "hello aram",
+        "hey aram", "start", "begin"
+      ],
+      "mapped_law": "none",
+      "severity_level": "none",
+      "simplified_explanation": "none",
+      "recommended_steps": [],
+      "response_template": [
+        "Hello! I am ARAM, your legal awareness assistant. How can I help you today?",
+        "Hi there! I'm ARAM. I'm here to help you understand your legal rights. What's on your mind?",
+        "Welcome! I'm ARAM, your legal awareness guide. Please describe your situation and I'll do my best to help."
+      ]
+    },
+
+    {
+      "intent_id": "UNKNOWN001",
+      "intent_description": "Unrecognized or out-of-scope query",
+      "keywords": [
+        "weather", "cricket", "movie", "food", "recipe",
+        "sports", "music", "dance", "love", "relationship",
+        "homework", "study", "school", "college", "job",
+        "salary", "investment", "stock", "crypto", "bitcoin",
+        "health", "medicine", "doctor", "hospital", "diet",
+        "astrology", "horoscope", "god", "religion", "politics"
+      ],
+      "mapped_law": "none",
+      "severity_level": "none",
+      "simplified_explanation": "none",
+      "recommended_steps": [],
+      "response_template": [
+        "I'm here to help with legal awareness related to consumer issues, cyber concerns, and general legal rights in India. Could you describe your situation in more detail?",
+        "I want to help but need a bit more context. Could you tell me more about what happened?",
+        "I didn't quite catch that. Please describe your situation and I'll guide you to the right information.",
+        "That's outside my area of expertise. I specialize in legal awareness for Indian citizens. Could you tell me about a legal concern you have?",
+        "I'm specifically designed to help with legal awareness. For other topics, please consult appropriate resources. How can I help you with a legal matter?"
+      ]
+    }
+  ]
+}

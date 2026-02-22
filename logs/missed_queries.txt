@@ -1,0 +1,30 @@
+அறம் (ARAM) — Missed Queries Export
+Generated: 2026-02-22 12:50
+Total missed: 19
+==================================================
+
+ACTION: Add these to engine/model_trainer.py
+        under the correct intent category
+        Then run: python -m engine.model_trainer
+
+──────────────────────────────────────────────────
+
+1. hacking
+2. mm
+3. no
+4. tata
+5. hacking aana enna pannanu
+6. mm enna laws use pandra
+7. sorry
+8. illai
+9. poolu
+10. mairu
+11. in tamil
+12. - "what is cricket"
+13. வணக்கம் அறம்
+14. வணக்கம்  aram
+15. வணக்கம் aram
+16. bayamaruku
+17. என்ன பண்ற
+18. who are u
+19. I am being threatened

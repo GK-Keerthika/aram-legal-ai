@@ -1,0 +1,6 @@
+aram_env/
+__pycache__/
+*.pyc
+*.pyo
+.env
+logs/conversations.json
