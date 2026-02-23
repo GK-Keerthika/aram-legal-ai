@@ -1,6 +1,6 @@
 அறம் (ARAM) — Missed Queries Export
-Generated: 2026-02-22 12:50
-Total missed: 19
+Generated: 2026-02-23 12:17
+Total missed: 20
 ==================================================
 
 ACTION: Add these to engine/model_trainer.py
@@ -9,22 +9,23 @@ ACTION: Add these to engine/model_trainer.py
 
 ──────────────────────────────────────────────────
 
-1. hacking
-2. mm
-3. no
-4. tata
-5. hacking aana enna pannanu
-6. mm enna laws use pandra
-7. sorry
-8. illai
-9. poolu
-10. mairu
-11. in tamil
-12. - "what is cricket"
-13. வணக்கம் அறம்
-14. வணக்கம்  aram
-15. வணக்கம் aram
-16. bayamaruku
-17. என்ன பண்ற
-18. who are u
-19. I am being threatened
+1. வணக்கம்  aram
+2. வணக்கம் aram
+3. sorry
+4. mm
+5. poolu
+6. mudiyathu
+7. I am being threatened
+8. என்ன பண்ற
+9. no
+10. வணக்கம் அறம்
+11. illai
+12. who are u
+13. tata
+14. mairu
+15. hacking aana enna pannanu
+16. hacking
+17. - "what is cricket"
+18. in tamil
+19. bayamaruku
+20. mm enna laws use pandra

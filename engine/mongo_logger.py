@@ -3,6 +3,9 @@
 # Fallback to local JSON if MongoDB unavailable
 
 import os
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+import certifi
 from datetime import datetime
 from dotenv import load_dotenv
 
@@ -20,10 +23,11 @@ try:
 
     if MONGODB_URI:
         client = MongoClient(
-            MONGODB_URI,
-            server_api=ServerApi('1'),
-            serverSelectionTimeoutMS=5000
-        )
+    MONGODB_URI,
+    server_api=ServerApi('1'),
+    serverSelectionTimeoutMS=5000,
+    tlsCAFile=certifi.where()
+)
         # Test connection
         client.admin.command('ping')
         db = client["aram_database"]
