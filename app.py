@@ -9,6 +9,8 @@ from flask_limiter.util import get_remote_address
 import re
 import hashlib
 import os
+import threading
+import urllib.request
 
 from engine.intent_detector import detect_intent
 from engine.response_generator import generate_response
@@ -288,7 +290,21 @@ def health():
         "languages": ["English", "Tamil", "Tanglish"],
         "integrity": "✅ OK" if integrity_ok else "⚠️ WARNING"
     })
+# Keep Render awake
 
+
+def ping_self():
+    import time
+    while True:
+        time.sleep(840)
+        try:
+            urllib.request.urlopen(
+                'https://aram-legal-ai.onrender.com/health'
+            )
+        except:
+            pass
+
+threading.Thread(target=ping_self, daemon=True).start()
 
 if __name__ == "__main__":
     app.run(debug=True)
