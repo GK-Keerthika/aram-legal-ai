@@ -1000,7 +1000,7 @@ body::after {
 @media (max-width: 640px) {
   .navbar { padding: 12px 16px; }
   .logo-tamil { font-size: 18px; }
-  .nav-link span { display: none; }
+  .nav-emoji { display: none; }
   .chat-window { padding: 16px; }
   .input-zone { padding: 12px 16px 16px; }
   .about-content, .laws-content { padding: 24px 20px; }
@@ -1067,4 +1067,251 @@ body::after {
 /* Lang content transition */
 .lang-content {
   animation: pageIn 0.3s var(--ease);
+}
+/* ── Logo Meaning Overlay ──────────────────────────── */
+.logo-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(5,8,16,0.88);
+  backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.logo-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.logo-overlay-box {
+  background: linear-gradient(160deg, var(--navy-700) 0%, var(--navy-800) 100%);
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 24px;
+  padding: 32px 28px 28px;
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.7), 0 0 60px rgba(201,168,76,0.06);
+  transform: scale(0.94) translateY(12px);
+  transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.logo-overlay.open .logo-overlay-box {
+  transform: scale(1) translateY(0);
+}
+
+.logo-overlay-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border-dim);
+  border-radius: 50%;
+  color: var(--text-300);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.logo-overlay-close:hover {
+  background: rgba(201,168,76,0.12);
+  color: var(--gold-400);
+  border-color: var(--border);
+}
+
+.logo-overlay-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.logo-overlay-tamil {
+  font-family: 'Noto Sans Tamil', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--gold-500);
+  display: block;
+  text-shadow: 0 0 30px rgba(201,168,76,0.4);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.logo-overlay-sub {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  color: var(--text-300);
+  font-style: italic;
+}
+
+/* SVG diagram */
+.logo-meaning-svg {
+  width: 100%;
+  max-width: 320px;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 0 20px rgba(201,168,76,0.2));
+}
+
+/* Spin animation for outer dotted circle */
+.spin-slow {
+  transform-origin: 160px 140px;
+  animation: spinSlow 30s linear infinite;
+}
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Label container — positioned relative to SVG */
+.logo-labels {
+  position: relative;
+  height: 0;
+  top: -310px;
+  margin-bottom: -310px;
+  pointer-events: none;
+}
+
+/* Base label styles */
+.logo-label {
+  position: absolute;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--gold-400);
+  opacity: 0.8;
+  letter-spacing: 0.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+/* Compass labels */
+.compass-n { top: 2px; }
+.compass-s { top: 288px; }
+.compass-e {
+  left: auto;
+  right: 8px;
+  top: 138px;
+  transform: none;
+}
+.compass-w {
+  left: 8px;
+  top: 138px;
+  transform: none;
+}
+
+/* Beam labels */
+.beam-past {
+  top: 56px;
+  left: calc(50% - 92px);
+  transform: none;
+  font-size: 10px;
+  opacity: 0.6;
+}
+.beam-present {
+  top: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  opacity: 0.6;
+}
+.beam-future {
+  top: 56px;
+  left: calc(50% + 60px);
+  transform: none;
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+/* Pan labels */
+.pan-left, .pan-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.pan-left {
+  top: 148px;
+  left: calc(50% - 100px);
+  transform: none;
+}
+.pan-right {
+  top: 148px;
+  left: calc(50% + 56px);
+  transform: none;
+}
+.pan-tamil {
+  font-family: 'Noto Sans Tamil', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold-400);
+  letter-spacing: 0;
+}
+.pan-eng {
+  font-size: 10px;
+  color: var(--text-300);
+  font-family: 'DM Mono', monospace;
+}
+
+/* Existence label */
+.existence-label {
+  top: 194px;
+  font-size: 11px;
+  color: var(--text-300);
+  letter-spacing: 1px;
+}
+
+/* Meaning cards */
+.logo-meaning-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.meaning-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border-dim);
+  border-radius: 12px;
+  transition: all 0.2s;
+}
+.meaning-card:hover {
+  border-color: var(--border);
+  background: var(--gold-glow);
+}
+.meaning-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.meaning-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold-400);
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 4px;
+}
+.meaning-desc {
+  font-size: 12.5px;
+  color: var(--text-300);
+  line-height: 1.7;
+  font-family: 'Noto Sans Tamil', 'DM Sans', sans-serif;
+}
+
+/* Mobile overlay adjustments */
+@media (max-width: 480px) {
+  .logo-overlay-box { padding: 28px 18px 24px; }
+  .logo-overlay-tamil { font-size: 28px; }
 }

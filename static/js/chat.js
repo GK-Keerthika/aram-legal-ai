@@ -221,3 +221,22 @@ window.addEventListener('load', () => {
   const law1 = document.getElementById('law1');
   if (law1) law1.classList.add('open');
 });
+// ── Logo Meaning Overlay ──────────────────────────────
+function openLogoOverlay() {
+  const overlay = document.getElementById('logoOverlay');
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLogoOverlay(e) {
+  // If called from backdrop click, only close if clicking outside box
+  if (e && e.target !== document.getElementById('logoOverlay')) return;
+  const overlay = document.getElementById('logoOverlay');
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Close on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLogoOverlay();
+});
